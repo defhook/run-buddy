@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-.contact-info > * {
-    flex: 1;
-    margin: 15px;
-}
-
 body {
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
@@ -20,12 +15,11 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
     background-position: 80%;
 }
@@ -68,14 +62,17 @@ header nav ul li a:hover {
     border-radius: 15px;
     text-shadow: none;
 }
+/* HEADER/ NAVBAR STYLES END */
+
+/* FOOTER STYLES START */
 
 footer {
     background: #fce138;
-    width: 100%;
     padding: 40px 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 footer h2 {
@@ -93,6 +90,10 @@ footer a{
     color: #024e76;
 }
 
+/*END FOOTER STYLES */
+
+/*STYLE ALL SECTION TAGS */
+
 section {
     padding: 60px;
 }
@@ -101,7 +102,6 @@ section {
 .hero {
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -109,7 +109,6 @@ section {
     background-attachment: fixed;
     background-position: 80%;
 }
-/* Hero Style End */
 
 .hero-cta {
     width: 35%;
@@ -129,12 +128,17 @@ section {
 
 .hero-form {
     border: 3px solid #024e76;
-    border-radius: 15px;
-    background-color: rgba(252, 225, 56, 0.80);
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     color: #024e76;
     width: 40%;
     margin: 3.5%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
 .hero-form h3 {
@@ -154,7 +158,7 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
 }
 
@@ -173,32 +177,16 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 15px;
-}
-
-.hero-form button:hover {
-    background-color: #39a6b2;
+    border-radius: 10px;
 }
 
 /* hero styles end */
 
-.intro p {
-    line-height: 1.7;
-    color: #39a6b2;
-    width: 80%;
-    font-size: 20px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.steps {
-    background: #fce138;
-}
-
+/* SECTION TITLE STYLES START */
 .section-title {
     font-size: 48px;
-    color: #024e76;
     border-bottom: 3px solid;
+    color: #024e76;
     padding-bottom: 20px;
     text-align: center;
     margin: 0 auto 35px auto;
@@ -212,11 +200,25 @@ section {
 .secondary-border {
     border-color: #39a6b2;
 }
+ /* SECTION TITLES STYLES END */
 
-.step h3 {
-    color: #024e76;
-    font-size: 46px;
-    flex: 1 30%;
+ /* WHAT WE DO STYLES */
+
+.intro p {
+    line-height: 1.7;
+    color: #39a6b2;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* WHAT WE DO STYLES END */
+
+/* WHAT YOU DO STYLES START */
+
+.steps {
+    background: #fce138;
 }
 
 .step {
@@ -229,12 +231,14 @@ section {
     justify-content: space-between;
 }
 
-.step:nth-child(even) {
-    border-bottom: 1px solid #39a6b2;
+.step:last-child {
+    border-bottom: none;
 }
 
-.step:not(:last-child) {
-    border-bottom: 1px solid #39a6b2;
+.step h3 {
+    color: #024e76;
+    font-size: 46px;
+    flex: 1 30%;
 }
 
 .step-info {
@@ -249,12 +253,12 @@ section {
     margin-right: 20px;
 }
 
-.step-text {
-    flex: 12;
-}
-
 .step-img img {
     max-width: 100%;
+}
+
+.step-text {
+    flex: 12;
 }
 
 .step-text p {
@@ -268,33 +272,32 @@ section {
     color: #024e76;
 }
 
+/* WHAT YOU DO STYLES END */
+
+/* MEET THE TRAINERS START */
+
+.trainers {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .trainer {
-    margin: 0 auto 20px auto;
+    margin: 20px;
+    flex: 1;
     background: #024e76;
     color: #fce138;
-    flex: 1;
 }
 
 .trainer img {
     width: 100%;
-    
 }
 
 .trainer-bio {
     padding: 25px;
     line-height: 1.3;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.flex-row {
-    display: flex;
 }
 
 .trainer-bio h3 {
@@ -311,13 +314,8 @@ section {
     font-size: 17px;
 }
 
-.trainers {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+/* TRAINER STYLES END */
+
 /* Reach out styles start */
 .contact {
     background: #024e76;
@@ -325,6 +323,17 @@ section {
 
 .contact h2 {
     color: #fce138;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info > * {
+    flex: 1;
+    margin: 15px;
 }
 
 .contact-info iframe {
@@ -338,16 +347,6 @@ section {
 .contact-info h3 {
     color: #fce138;
     font-size: 32px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    background-color: rgba(255,255,255, 0.75);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    background-color: rgba(255,255,255, 1);
 }
 
 .contact-info p,
@@ -368,7 +367,14 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
 .contact-form button {
@@ -379,7 +385,7 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .contact-form button:hover {
@@ -390,12 +396,21 @@ section {
     color: #fce138;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 /* reach out styles end */
+
+/* UTILITIES */
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.flex-row {
+    display: flex;
+}
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
@@ -474,6 +489,11 @@ section {
 
     .step-text {
         flex: 100;
+    }
+
+    .trainer-bio h3,
+    .trainer-bio h4 {
+        display: block;
     }
 }
 
